@@ -20,7 +20,7 @@ const AddGenre = () => {
 
   useEffect(() => {
     setActiveId(state.selectedGenre);
-  }, []);
+  }, [state.selectedGenre]);
 
   return (
     <div className="genre-box">

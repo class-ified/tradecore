@@ -21,7 +21,7 @@ const AddSubGenre = () => {
 
   useEffect(() => {
     setActiveId(state.selectedSubGenre);
-  }, []);
+  }, [state.selectedSubGenre]);
 
   return (
     <div className="genre-box">
