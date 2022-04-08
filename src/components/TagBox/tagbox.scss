@@ -1,0 +1,16 @@
+.tag-box {
+    min-height: 30px;
+    min-width: 100px;
+    color: var(--shade-grey);
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    transition: 0.5s ease-in;
+    border: 1px solid var(--shade-grey);
+    cursor: pointer;
+  }
+  
+  .tag-box__active {
+    background: var(--shade-grey);
+    color: var(--regular-white);
+  }
+  

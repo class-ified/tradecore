@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// ------------ import external dependencies ----------
+import { lazy, Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+
+// ----------- import internal dependencies -----------
+import { GenreProvider } from "context/genreState";
+import "./sass/main.scss";
+
+// ----------- import component pages with lazy loading -----------
+const AddBook = lazy(() => import("./pages/AddBook"));
+const Success = lazy(() => import("./pages/Success"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Suspense fallback={<div>Loading</div>}>
+        <GenreProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Navigate to="/addbook" />} />
+              <Route path="addbook" element={<AddBook />} />
+              <Route path="success" element={<Success />} />
+            </Routes>
+          </Router>
+        </GenreProvider>
+      </Suspense>
+    </>
   );
 }
 

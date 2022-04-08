@@ -1,0 +1,107 @@
+.box-wrapper {
+  max-width: 800px;
+  display: block;
+  border: 1px solid $primary-ash;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 5px;
+
+  &__heading {
+    display: block;
+    color: $shade-black;
+  }
+}
+
+// ------------ spacing helper classes ------------
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+// ------------ button helper class ----------
+.btn {
+  min-width: 100px;
+  min-height: 35px;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  outline: var(--off-white);
+  border-radius: 5px;
+  display: block;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.btn-grey {
+  background: var(--shade-grey);
+  color: var(--regular-white);
+}
+
+.btn-tran {
+  background: transparent;
+  border: 1px solid var(--shade-grey);
+  color: var(--shade-grey);
+}
+
+// --------- display helpers ----------
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+// ------------ input helper class -----------
+input,
+select {
+  height: 40px;
+  display: block;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--shade-grey);
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  height: 100px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--shade-grey);
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: auto;
+}
+
+label {
+  color: var(--shade-grey);
+}
+
+.input-wrap {
+  margin-bottom: 1rem;
+}
+
+.genre-box {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.err-msg {
+  color: red;
+  display: block;
+}

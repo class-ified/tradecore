@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+
+  body {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+        color: initial;
+      }
+    }
+
+    // input {
+    //   padding: 1.5rem 0.5rem !important;
+    // }
+
+    label {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+}
