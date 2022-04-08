@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // ------------- import internal dependencies -----------
 import "./success.scss";
-import { ReactComponent as Complete } from "../../asset/svgs/done.svg";
+import { ReactComponent as Complete } from "asset/svgs/done.svg";
 import { useGenre } from "context/genreState";
 
 const Success = () => {
