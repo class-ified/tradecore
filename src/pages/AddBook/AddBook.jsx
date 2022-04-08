@@ -68,12 +68,10 @@ const AddBook = () => {
       case 1: {
         setCurrStep(currStep + 1);
         dispatch({ type: "getSubGenre" });
-        console.log(state);
         break;
       }
       case 2: {
         setCurrStep(currStep + 1);
-        console.log(state);
         break;
       }
       case 3: {
@@ -82,14 +80,12 @@ const AddBook = () => {
         const subGenresMatch = subGenreList.findIndex(
           (e) => e.name === subGenre
         );
-        console.log(subGenresMatch);
 
         if (subGenresMatch > -1) {
           setErr(true);
           break;
         }
-
-        console.log(state);
+    
         dispatch({
           type: "updateSubGenreData",
           name: subGenre,
@@ -110,7 +106,6 @@ const AddBook = () => {
 
   const handleAddGenre = (e) => {
     e.preventDefault();
-    console.log(state.selectedSubGenreData.isDescriptionRequired);
 
     if (!title) {
       setFormErr(true);

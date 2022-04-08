@@ -13,10 +13,8 @@ const AddSubGenre = () => {
   const [activeId, setActiveId] = useState("");
 
   const handleClick = (name, data) => {
-    console.log("fires");
     setActiveId(name);
     dispatch({ type: "selectedSubGenre", subGenre: name, data: data });
-    console.log(state);
   };
 
   useEffect(() => {

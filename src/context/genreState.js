@@ -47,7 +47,6 @@ function genreReducer(state, action) {
       );
       const newGenre = [...state.genres];
       newGenre.splice(findGenreIndex, 1, updateGenre);
-      console.log(findGenreIndex, 1, newGenre);
 
       return {
         ...state,
@@ -62,7 +61,6 @@ function genreReducer(state, action) {
       const updateSubGenres = state.genres.filter(
         (e) => e.id === state.selectedGenre
       )[0];
-      console.log(state.selectedGenre, updateSubGenres);
       return {
         ...state,
         subGenres: updateSubGenres

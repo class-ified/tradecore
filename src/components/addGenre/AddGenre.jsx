@@ -12,10 +12,8 @@ const AddGenre = () => {
   const { state, dispatch } = useGenre();
 
   const handleClick = (id) => {
-    console.log("fires");
     setActiveId(id);
     dispatch({ type: "selectedGenre", genreId: id });
-    console.log(state);
   };
 
   useEffect(() => {
